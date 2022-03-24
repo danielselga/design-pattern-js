@@ -1,3 +1,3 @@
 >### Design Pattern In javaScript
-
-> - Design pattern are cummon architectural approaces.
+>
+> - Design pattern are common architectural approaces.
