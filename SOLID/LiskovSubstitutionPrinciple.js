@@ -13,6 +13,14 @@ class Rectangle {
   }
 }
 
+class Square extends Rectangle {
+    constructor(size) {
+        super(size, size)
+    }
+}
+
+let sq = new Square()
+
 let rc = new Rectangle(2,3)
 
 console.log(rc.toString())
