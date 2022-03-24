@@ -21,3 +21,15 @@
 > - Façade
 > - Flyweight
 > - Proxy
+>### Behavioral
+> - Chain of Responsability
+> - Command
+> - Interpreter
+> - Iterator
+> - Mediator
+> - Memento
+> - Observer
+> - State
+> - Strategy
+> - Template method
+> - Visitor
