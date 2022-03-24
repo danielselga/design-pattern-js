@@ -6,9 +6,6 @@
 > - Universaly relevant.
 
 >## S.O.L.I.D Design Principles
-> #### Single  Responsability Principle
-> Text heare
-
 >### Creational
 > - Builder
 > - Factories
