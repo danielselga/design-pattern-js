@@ -7,6 +7,11 @@
 
 >## S.O.L.I.D Design Principles
 
+> ##### Single Responsability Principle
+> ##### Open Close Principle
+> ##### Liskov Substituition Principle
+> ##### Interface Segregation Principle
+> ##### Dependency Inversion Principle
 >### Creational
 > - Builder
 > - Factories
