@@ -5,7 +5,9 @@
 > - Frist implement in Smalltalk & C++ but translated to many languages like c#, java, js...
 > - Universaly relevant.
 
->## SOLID Design Principles
+>## S.O.L.I.D Design Principles
+> ##### Single  Responsability Principle
+> Text heare
 
 >### Creational
 > - Builder
