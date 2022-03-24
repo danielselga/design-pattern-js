@@ -1,5 +1,15 @@
->### Design Pattern In javaScript
+>#### Design Pattern In javaScript
 >
 > - Design pattern are common architectural approaches.
 > - Popularized by the gang of four book (1994).
-> - Smalltalk & C++
+> - Frist implement in Smalltalk & C++ but translated to many languages like c#, java, js...
+> - Universaly relevant.
+
+>#### SOLID Design Principles
+>### Creational
+> - Builder
+> - Factories
+>   - Abstract Factory
+>   - Factory Method
+> - Prototype
+> - Singleton
