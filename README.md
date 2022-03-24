@@ -13,6 +13,7 @@
 >   - Factory Method
 > - Prototype
 > - Singleton
+
 >### Structural
 > - Adapter
 > - Bridge
@@ -21,6 +22,7 @@
 > - Façade
 > - Flyweight
 > - Proxy
+
 >### Behavioral
 > - Chain of Responsability
 > - Command
