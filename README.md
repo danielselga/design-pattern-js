@@ -1,4 +1,4 @@
->## Design Pattern In javaScript
+>## Design Patterns In javaScript
 >
 > - Design pattern are common architectural approaches.
 > - Popularized by the gang of four book (1994).
@@ -13,3 +13,11 @@
 >   - Factory Method
 > - Prototype
 > - Singleton
+>### Structural
+> - Adapter
+> - Bridge
+> - Composite
+> - Decorator
+> - Façade
+> - Flyweight
+> - Proxy
