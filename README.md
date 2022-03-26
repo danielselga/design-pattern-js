@@ -19,7 +19,11 @@
 > ##### Dependency Inversion Principle
 > - High-level modules should not depend upon low-level ones, use abstractions.
 
->### Creational
+>## Gama Categorization
+> - Desgin patterns are typically split into three categories.
+> - This is called Gamma Categorization after Erich Gamma, on of GoF authors.
+
+>### Creational Patterns
 > - Builder
 > - Factories
 >   - Abstract Factory
@@ -27,7 +31,7 @@
 > - Prototype
 > - Singleton
 
->### Structural
+>### Structural Patterns
 > - Adapter
 > - Bridge
 > - Composite
@@ -36,7 +40,7 @@
 > - Flyweight
 > - Proxy
 
->### Behavioral
+>### Behavioral Patterns
 > - Chain of Responsability
 > - Command
 > - Interpreter
