@@ -48,12 +48,12 @@ class Point {
 
 // Gruping related functionality
 class PointFactory {
-  newCartesianPoint(x, y) {
+  static newCartesianPoint(x, y) {
     return new Point(x, y);
   }
 
   // Factory Methods
-  newPolarPoint(rho, theta) {
+  static newPolarPoint(rho, theta) {
     return new Point(rho * Math.cos(theta), rho * Math.sin(theta));
   }
 }
@@ -64,5 +64,5 @@ console.log(p);
 const p2 = PointFactory.newPolarPoint(5, Math.PI / 2);
 console.log(p2);
 
-const p3 = Point.factory.newPolarPoint(5, Math.PI / 2)
-console.log(p3)
+// const p3 = Point.factory.newPolarPoint(5, Math.PI / 2)
+// console.log(p3)
