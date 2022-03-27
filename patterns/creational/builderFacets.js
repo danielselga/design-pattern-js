@@ -34,8 +34,8 @@ class PersonBuilder {
 }
 
 class PersonJobBuilder extends PersonBuilder {
-  constructor() {
-    super();
+  constructor(person) {
+    super(person);
   }
 
   at(companyName) {
