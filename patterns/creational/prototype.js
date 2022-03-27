@@ -39,9 +39,7 @@ class Person {
 }
 
 const john = new Person('john', new Address('123 London Road', 'London', 'UK'))
-console.log(john)
 let jane = john.deepCopy();
-
 jane.name = 'Jane';
 jane.address.streetAddress = '321 Angel St'; 
 
