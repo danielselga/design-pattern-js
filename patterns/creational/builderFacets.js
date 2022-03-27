@@ -97,6 +97,7 @@ class CodeBuilder {
 
     addField(name) {
         this.params.push(name)
+        return this // This make the builder more fluent
     }
 
     toString() {
@@ -110,6 +111,13 @@ class CodeBuilder {
     }
 }
 const cb = new CodeBuilder('Person')
-cb.addField('name')
-cb.addField('age')
+cb.addField('name').addField('age')
 console.log(cb.toString())
+
+/**
+ * SUMMARY
+ * A builder is a separate component for building an object
+ * Can either give builder an initializer or return it via a static function
+ * To make builder fluent, return self
+ * Different facets of an object can be built with differents builders work in tandem via a base class
+ */
