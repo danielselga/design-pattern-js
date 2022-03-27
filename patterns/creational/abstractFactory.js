@@ -91,3 +91,10 @@ let machine = new HotDrinkMachine();
 machine.interact(function (drink) {
   drink.consume();
 });
+
+/** Summary
+ * A factory method is a static method that create objects.
+ * A factory is any entity that can take care of object creation.
+ * A factory can be external or reside inside the object as an inner class.
+ * Hierachies of factories can be used to create related objects.
+ */
