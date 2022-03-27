@@ -85,29 +85,31 @@ let person = pb.lives
   .earning(12300)
   .build();
 
-console.log(person);
+// console.log(person);
 
 // Exercise
-class Person {
-    constructor(name, age) {
-        this.name = name
-        this.age = age
-    }
-}
-
 class CodeBuilder {
     constructor(className) {
-        const className = new className()
+        this.classConstructorArr = []
+        this.params = []
+        this.classConstructorArr.push(`class ${className} {\n`)
     }
 
     addField(name) {
-        return className(name)
+        this.params.push(name)
     }
 
     toString() {
-        return `This Person name is ${this.name} and his age is ${this.age}`
+        this.classConstructorArr.push(`    constructor(${this.params}) {\n`)
+        for (let index in this.params) {
+            this.classConstructorArr.push(`       this.${this.params[index]} = ${this.params[index]}\n`)
+        }
+        this.classConstructorArr.push('    }\n')
+        this.classConstructorArr.push('}')
+        return this.classConstructorArr.join('')
     }
 }
-
 const cb = new CodeBuilder('Person')
-console.log(cb)
+cb.addField('name')
+cb.addField('age')
+console.log(cb.toString())
