@@ -86,3 +86,28 @@ let person = pb.lives
   .build();
 
 console.log(person);
+
+// Exercise
+class Person {
+    constructor(name, age) {
+        this.name = name
+        this.age = age
+    }
+}
+
+class CodeBuilder {
+    constructor(className) {
+        const className = new className()
+    }
+
+    addField(name) {
+        return className(name)
+    }
+
+    toString() {
+        return `This Person name is ${this.name} and his age is ${this.age}`
+    }
+}
+
+const cb = new CodeBuilder('Person')
+console.log(cb)
