@@ -29,12 +29,55 @@ class Person {
         this.address = address
     }
 
-    deepCopy() {
-        return new Person(this.name, this.address.deepCopy())
-    }
-
     toString() {
         return `${this.name} lives at ${this.address}`
+    }
+
+    greet() {
+        console.log(`Hi, my name is ${this.name} and i live at ${this.address}`)
+    }
+}
+
+class Serializer {
+    constructor(types) {
+        this.types  = types;
+    }
+
+    markRecursive(object) {
+        let idx = this.types.findIndex(t => {
+            return t.name === object.constructor.name;
+        })
+
+        if (idx !== -1) {
+            object['typeIndex'] = idx
+
+            for(let key in object) {
+                if (object.hasOwnProperty(key)) {
+                    this.markRecursive(object[key])
+                }
+            }
+        }
+    }
+
+    reconstructRecursive(object) {
+        if (object.hasOwnProperty('typeIndex')) {
+            const type = this.types[object.typeIndex]
+            const obj = new type()
+            for (let key in object) {
+                if (object.hasOwnProperty(key) && object[key] != null) {
+                    obj[key] = this.reconstructRecursive(object[key])
+                }
+            }
+            delete obj.typeIndex
+            return obj
+        }
+        return object
+    }
+
+    clone(object) {
+        this.markRecursive(object)
+        const copy = JSON.parse(JSON.stringify(object))
+        return this.reconstructRecursive(copy)
     }
 }
 
