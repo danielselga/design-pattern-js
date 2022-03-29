@@ -1,3 +1,6 @@
+/** ADAPTER PATTERN -> A Construct which adapts an existing interface X to conform to the required interface Y.
+ */
+
 class Point
 {
   constructor(x, y)
