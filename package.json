@@ -1,0 +1,25 @@
+{
+  "name": "designpattern",
+  "version": "1.0.0",
+  "description": ">## Design Patterns In javaScript > > - Design pattern are common architectural approaches. > - Popularized by the gang of four book (1994). > - Frist implement in Smalltalk & C++ but translated to many languages like c#, java, js... > - Universaly relevant.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest --watch --verbose false"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielselga/design-pattern-js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danielselga/design-pattern-js/issues"
+  },
+  "homepage": "https://github.com/danielselga/design-pattern-js#readme",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}
