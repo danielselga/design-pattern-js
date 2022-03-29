@@ -23,7 +23,7 @@ class Address {
   }
 }
 
-class Person {
+class Employee {
   constructor(name, address) {
     this.name = name;
     this.address = address;
@@ -80,10 +80,32 @@ class Serializer {
   }
 }
 
-const john = new Person("john", new Address("123 London Road", "London", "UK"));
-// jane.address.streetAddress = '321 Angel St';
-console.log(john.greet())
+class EmployeeFactory {
+  static _newEmployee(prototype, name, suite) {
+    const copy = EmployeeFactory.serializer.clone(prototype)
+    copy.name = name
+    copy.address.suite = suite
+    return copy
+  }
 
-let s = new Serializer([Person, Address]);
+  static newAuxOfficeEmployee(name, suite) {
+    return this._newEmployee(EmployeeFactory.aux, name, suite)
+  }
+
+  static newMainOfficeEmployee(name, suite) {
+    return this._newEmployee(EmployeeFactory.main, name, suite)
+  }
+}
+
+EmployeeFactory.serializer = new Serializer([Employee, Address])
+EmployeeFactory.main = new Employee(null, new Address('123 East Drive', 'London'))
+EmployeeFactory.aux = new Employee(null, new Address('200 London Rd'), 'Oxford')
+
+const john = new Employee()
+let s = new Serializer([Employee, Address]);
 let jane = s.clone(john);
-console.log(jane.greet());
+
+const daniel = EmployeeFactory.newMainOfficeEmployee('Daniel', 4321)
+const gege = EmployeeFactory.newAuxOfficeEmployee('Gege', 222)
+console.log(daniel.toString())
+console.log(gege.toString())
