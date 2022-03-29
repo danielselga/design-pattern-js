@@ -60,8 +60,7 @@ module.exports = { MyDataBase, ConfigurableRecordFinder, DummyDataBase };
 
 /**
  *  Summary
- * To implement a prototype partially construct an object and store it somewhere.
- * Deep copy the prototype.
- * Customize the resulting instance.
- * A factory provides a convenient API for using prototypes.
+ * A constructor can choose what to return, we can keep returning the same instance.
+ * Monostate: many instances, shared data.
+ * Directly depending on the Singleton is a bad ideia, introduce a dependency instead.
  */
