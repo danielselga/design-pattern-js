@@ -109,3 +109,11 @@ const daniel = EmployeeFactory.newMainOfficeEmployee('Daniel', 4321)
 const gege = EmployeeFactory.newAuxOfficeEmployee('Gege', 222)
 console.log(daniel.toString())
 console.log(gege.toString())
+
+/**
+ *  Summary
+ * To implement a prototype partially construct an object and store it somewhere.
+ * Deep copy the prototype.
+ * Customize the resulting instance.
+ * A factory provides a convenient API for using prototypes.
+ */
