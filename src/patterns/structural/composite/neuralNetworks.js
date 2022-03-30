@@ -44,8 +44,8 @@ class Connectable {
 
 class Neuron extends Connectable {
   constructor() {
-    super()
-    this.in = [];   
+    super();
+    this.in = [];
     this.out = [];
   }
 

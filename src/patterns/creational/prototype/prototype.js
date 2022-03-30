@@ -34,7 +34,7 @@ class Employee {
   }
 
   greet() {
-    return `Hi, my name is ${this.name} and i live at ${this.address}`
+    return `Hi, my name is ${this.name} and i live at ${this.address}`;
   }
 }
 
@@ -82,33 +82,40 @@ class Serializer {
 
 class EmployeeFactory {
   static _newEmployee(prototype, name, suite) {
-    const copy = EmployeeFactory.serializer.clone(prototype)
-    copy.name = name
-    copy.address.suite = suite
-    return copy
+    const copy = EmployeeFactory.serializer.clone(prototype);
+    copy.name = name;
+    copy.address.suite = suite;
+    return copy;
   }
 
   static newAuxOfficeEmployee(name, suite) {
-    return this._newEmployee(EmployeeFactory.aux, name, suite)
+    return this._newEmployee(EmployeeFactory.aux, name, suite);
   }
 
   static newMainOfficeEmployee(name, suite) {
-    return this._newEmployee(EmployeeFactory.main, name, suite)
+    return this._newEmployee(EmployeeFactory.main, name, suite);
   }
 }
 
-EmployeeFactory.serializer = new Serializer([Employee, Address])
-EmployeeFactory.main = new Employee(null, new Address('123 East Drive', 'London'))
-EmployeeFactory.aux = new Employee(null, new Address('200 London Rd'), 'Oxford')
+EmployeeFactory.serializer = new Serializer([Employee, Address]);
+EmployeeFactory.main = new Employee(
+  null,
+  new Address("123 East Drive", "London")
+);
+EmployeeFactory.aux = new Employee(
+  null,
+  new Address("200 London Rd"),
+  "Oxford"
+);
 
-const john = new Employee()
+const john = new Employee();
 let s = new Serializer([Employee, Address]);
 let jane = s.clone(john);
 
-const daniel = EmployeeFactory.newMainOfficeEmployee('Daniel', 4321)
-const gege = EmployeeFactory.newAuxOfficeEmployee('Gege', 222)
-console.log(daniel.toString())
-console.log(gege.toString())
+const daniel = EmployeeFactory.newMainOfficeEmployee("Daniel", 4321);
+const gege = EmployeeFactory.newAuxOfficeEmployee("Gege", 222);
+console.log(daniel.toString());
+console.log(gege.toString());
 
 /**
  *  Summary

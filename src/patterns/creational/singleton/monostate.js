@@ -8,15 +8,15 @@ class ChiefExecutiveOfficer {
   }
 
   get age() {
-      return ChiefExecutiveOfficer._age
+    return ChiefExecutiveOfficer._age;
   }
 
   set age(age) {
-    ChiefExecutiveOfficer._age = age
+    ChiefExecutiveOfficer._age = age;
   }
 
   toString() {
-      return `CEO name is ${this.name} and he is ${this.age} years old`
+    return `CEO name is ${this.name} and he is ${this.age} years old`;
   }
 }
 
@@ -25,13 +25,13 @@ class ChiefExecutiveOfficer {
 ChiefExecutiveOfficer._age = undefined;
 ChiefExecutiveOfficer._name = undefined;
 
-const ceo = new ChiefExecutiveOfficer()
-ceo.name = 'Daniel'
-ceo.age = 24
+const ceo = new ChiefExecutiveOfficer();
+ceo.name = "Daniel";
+ceo.age = 24;
 
-const ceo2 = new ChiefExecutiveOfficer()
-ceo.name = 'Gege'
-ceo.age = 23
+const ceo2 = new ChiefExecutiveOfficer();
+ceo.name = "Gege";
+ceo.age = 23;
 
-console.log(ceo.toString())
-console.log(ceo2.toString())
+console.log(ceo.toString());
+console.log(ceo2.toString());

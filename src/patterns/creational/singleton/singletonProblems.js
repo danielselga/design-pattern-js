@@ -38,21 +38,22 @@ class ConfigurableRecordFinder {
 
   totalPopulation(cities) {
     return cities
-      .map((city) => this.database.getPopulation(city)).reduce((x, y) => x + y)
+      .map((city) => this.database.getPopulation(city))
+      .reduce((x, y) => x + y);
   }
 }
 
 class DummyDataBase {
   constructor() {
     this.capitals = {
-      'alpha': 1,
-      'beta': 2,
-      'gamma': 3
-    }
+      alpha: 1,
+      beta: 2,
+      gamma: 3,
+    };
   }
 
   getPopulation(city) {
-    return this.capitals[city]
+    return this.capitals[city];
   }
 }
 

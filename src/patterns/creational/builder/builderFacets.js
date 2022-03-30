@@ -89,30 +89,32 @@ let person = pb.lives
 
 // Exercise
 class CodeBuilder {
-    constructor(className) {
-        this.classConstructorArr = []
-        this.params = []
-        this.classConstructorArr.push(`class ${className} {\n`)
-    }
+  constructor(className) {
+    this.classConstructorArr = [];
+    this.params = [];
+    this.classConstructorArr.push(`class ${className} {\n`);
+  }
 
-    addField(name) {
-        this.params.push(name)
-        return this // This make the builder more fluent
-    }
+  addField(name) {
+    this.params.push(name);
+    return this; // This make the builder more fluent
+  }
 
-    toString() {
-        this.classConstructorArr.push(`    constructor(${this.params}) {\n`)
-        for (let index in this.params) {
-            this.classConstructorArr.push(`       this.${this.params[index]} = ${this.params[index]}\n`)
-        }
-        this.classConstructorArr.push('    }\n')
-        this.classConstructorArr.push('}')
-        return this.classConstructorArr.join('')
+  toString() {
+    this.classConstructorArr.push(`    constructor(${this.params}) {\n`);
+    for (let index in this.params) {
+      this.classConstructorArr.push(
+        `       this.${this.params[index]} = ${this.params[index]}\n`
+      );
     }
+    this.classConstructorArr.push("    }\n");
+    this.classConstructorArr.push("}");
+    return this.classConstructorArr.join("");
+  }
 }
-const cb = new CodeBuilder('Person')
-cb.addField('name').addField('age')
-console.log(cb.toString())
+const cb = new CodeBuilder("Person");
+cb.addField("name").addField("age");
+console.log(cb.toString());
 
 /**
  * SUMMARY
