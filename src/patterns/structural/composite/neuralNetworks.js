@@ -94,3 +94,12 @@ layer1.connectTo(layer2);
 
 console.log(neuron1.toString());
 console.log(neuron2.toString());
+
+/**
+ * SUMMARY
+ * Objects can use other objects via inheritance/composition.
+ * Some composed and singular objects need similar/identical behaviors.
+ * Composite design pattern lets us treat both type of objects uniformly.
+ * JavaScript suports iteration with Symbol.iterator.
+ * A single object can make itself iterable by yielding this.
+ */
