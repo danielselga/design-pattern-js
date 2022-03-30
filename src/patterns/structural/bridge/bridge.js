@@ -46,7 +46,7 @@ const vector = new VectorRender()
 const circle = new Circle(vector, 5)
 circle.draw()
 circle.resize()
-circle.draw
+circle.draw()
 
 // VC VS RC RS
 // Render - Raster, Vector...
