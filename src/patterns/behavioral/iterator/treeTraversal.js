@@ -123,3 +123,8 @@ console.log([...tree.betterInOrder()].map(x => x.value));
 for (let x of tree.betterInOrder())
     console.log(x.value);
 
+/** Summary
+ * An iterator specified how you can traverse an object.
+ * Stateful iterators cannot be recursive.
+ * yeld allows for much more succint iteration.
+ */
