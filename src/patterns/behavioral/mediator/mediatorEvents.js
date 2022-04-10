@@ -68,3 +68,10 @@ const coach = new Coach(game)
 player.score()
 player.score()
 player.score()
+
+/** Summary
+ * Create the mediator and have each object in the system refer to it.
+ * Mediator engages in bidirectional communication with connected components.
+ * Mediator has functions the components can call.
+ * Components have functions the mediator can call.
+ */
