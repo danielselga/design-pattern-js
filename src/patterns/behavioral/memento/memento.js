@@ -83,3 +83,10 @@ ba.undo();
 console.log(`Undo 2: ${ba.toString()}`);
 ba.redo();
 console.log(`Redo 2: ${ba.toString()}`);
+
+/** Summary
+ * Memento are used to roll back states arbitrary.
+ * A memento is simply a token/handle class with (typically) no functions of its own.
+ * A memento is not required to expose directly the state(s) to which it reverts the system.
+ * Can be used to implement undo/redo.
+ */
